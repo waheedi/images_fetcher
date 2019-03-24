@@ -1,0 +1,16 @@
+Sun, 24 Mar 2019 09:01:43 +0100
+./Gemfile	Sat, 23 Mar 2019 20:28:11 +0100
+./Gemfile.lock	Sat, 23 Mar 2019 10:34:47 +0100
+./image_fetcher	Sat, 23 Mar 2019 20:38:34 +0100
+./lib/image_fetcher/fetchers/http.rb	Sun, 24 Mar 2019 09:00:59 +0100
+./lib/image_fetcher/options.rb	Sun, 24 Mar 2019 09:00:19 +0100
+./lib/image_fetcher/parsers/json.rb	Sat, 23 Mar 2019 19:38:04 +0100
+./lib/image_fetcher/parsers/raw_file.rb	Sun, 24 Mar 2019 09:00:33 +0100
+./lib/image_fetcher/version.rb	Sat, 23 Mar 2019 16:20:49 +0100
+./lib/image_fetcher.rb	Sun, 24 Mar 2019 08:58:10 +0100
+./LICENSE	Sun, 24 Mar 2019 08:46:17 +0100
+./README.md	Sun, 24 Mar 2019 08:53:00 +0100
+./test/benchmarks	Sat, 23 Mar 2019 11:04:15 +0100
+./test/fixtures/source_images.txt	Sat, 23 Mar 2019 20:07:09 +0100
+./test/unit/http_fetcher.rb	Sun, 24 Mar 2019 08:35:10 +0100
+./test/unit/raw_file_parser.rb	Sat, 23 Mar 2019 20:29:19 +0100
