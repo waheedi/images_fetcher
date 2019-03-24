@@ -48,45 +48,46 @@ module ImageFetcher
         end
       end
 
+      # Get source file location/URI as string, type will decide which method will be used to parse/read the file
       def source_location_option(parser)
-        # Get source file location/URI as string, type will decide which method will be used to parse/read the file
         parser.on('-s', '--source FILE', String,  'Source file/URI to be used as source for image fetcher') do |uri|
           self.source = uri
         end
       end
 
+      # Get the source file format
       def source_format_option(parser)
-        # Get the format for the source file/uri that are already defined in FORMATS
         format_list = FORMATS.join(', ')
         parser.on('-f', '--format FORMAT',  FORMATS, 'Source file format type (default: "plain")', "(#{format_list})") do |format|
           self.format = format
         end
       end
 
+      # Get the storage option for saving fetched images, currently
+      # will be default to local drive, later can be remote
       def storage_option(parser)
-        # Get the storage option for saving fetched images, currently
-        # will be default to local drive, later can be remote
-        parser.on('-p', '--storage DESTINATION', String, 'Storage destination for ImageFetcher (default: "~/ImageFetcher/images")') do |storage|
+          parser.on('-p', '--storage DESTINATION', String, 'Storage destination for ImageFetcher (default: "~/ImageFetcher/images")') do |storage|
           self.storage = storage
         end
       end
 
+      # Cast 'delay' argument to a Float.
       def delay_execution_option(parser)
-        # Cast 'delay' argument to a Float.
         parser.on('--delay N', Float, 'Delay N seconds before executing') do |n|
           self.delay = n
         end
       end
 
+
+      # Cast 'time' argument to a Time object.
       def execute_at_time_option(parser)
-        # Cast 'time' argument to a Time object.
         parser.on('-t', '--time [TIME]', Time, 'Begin execution at given time') do |time|
           self.time = time
         end
       end
 
+      # Boolean switch for verbosity.
       def boolean_verbose_option(parser)
-        # Boolean switch.
         parser.on('-v', '--verbose', 'Run verbosely') do |v|
           self.verbose = v
         end

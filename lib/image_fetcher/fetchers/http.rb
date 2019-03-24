@@ -11,8 +11,9 @@ module ImageFetcher
         self.fetch_resource
       end
 
+
+      # Fetchs a resouce by creating an HTTP request and reading response and writeing it in chunks
       def fetch_resource
-        # Fetchs a resouce by creating an HTTP request and reading response and writeing it in chunks
         verbose = ImageFetcher::Options.options.verbose
         begin
           uri = URI(self.resource_uri)
@@ -49,8 +50,9 @@ module ImageFetcher
         return true
       end # method fetch_resource
 
+
+      # populate filename from the original filename and prepend it with epoch time, and the base sotrage location
       def self.get_filename_path(uri)
-        # populate filename from the original filename and prepend it with epoch time, and the base sotrage location
         storage_base = ImageFetcher::Options.options.storage
         uniq_filename = "#{Time.now.to_i}_#{File.basename(uri.path)}"
         return storage_base + uniq_filename

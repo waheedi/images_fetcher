@@ -2,8 +2,8 @@ module ImageFetcher
   module Engine
     class << self
 
+      # Starting the read/parse and fetch process
       def go
-        # Let's roll. starting the read/parse and fetch process
         raw_file_parser = ImageFetcher::Parser::RawFile.new
         raw_file_parser.read
       end
