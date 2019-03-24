@@ -1,7 +1,13 @@
 ## images_fetcher
 ImageFetcher helps you to fetch images from a list of URIs
 
+
 #### Usage
+
+##### Running ImageFetcher
+`$ image_fetcher -s test/fixtures/source_images.txt -v`
+
+`$ image_fetcher -h`
 
 ```
 Usage: image_fetcher [options]
@@ -18,3 +24,9 @@ Common options:
     -h, --help                       Show this message
         --version                    Show version
 ```
+
+##### Testing
+Test coverage 30%
+`$ rspec test/unit/* --format documentation`
+
+
