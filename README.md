@@ -26,7 +26,5 @@ Common options:
 ```
 
 ##### Testing
-Test coverage 30%
+Test coverage 30%\
 `$ rspec test/unit/* --format documentation`
-
-
