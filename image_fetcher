@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << './lib'
+
+require 'eventmachine'
+require 'image_fetcher'
+require 'image_fetcher/version'
+require 'image_fetcher/options'
+require 'image_fetcher/parsers/raw_file'
+require 'image_fetcher/fetchers/http'
+
+# options will hold our ImageFetcher Options
+options = ImageFetcher::Options.parse(ARGV)
+
+Signal.trap("INT") { ImageFetcher::Engine.teardown }
+
+raise "Source file/uri can't be empty" unless options.source
+
+# start the fetch, let's GO
+ImageFetcher::Engine.go
