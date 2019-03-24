@@ -2,7 +2,6 @@
 
 $LOAD_PATH << './lib'
 
-require 'eventmachine'
 require 'image_fetcher'
 require 'image_fetcher/version'
 require 'image_fetcher/options'
